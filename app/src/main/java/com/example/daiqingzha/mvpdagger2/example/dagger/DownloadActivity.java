@@ -20,6 +20,12 @@ public class DownloadActivity extends AppCompatActivity implements DownloadContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
+        DaggerDownloadComponent
+                .builder()
+                .downloadModule(new DownloadModule(this,"1001"))
+                .build()
+                .inject(this);
+        mDownPresenter.download("android.file");
     }
 
     @Override

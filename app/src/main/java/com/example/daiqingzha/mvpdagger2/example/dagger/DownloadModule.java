@@ -1,5 +1,6 @@
 package com.example.daiqingzha.mvpdagger2.example.dagger;
 
+import dagger.Module;
 import dagger.Provides;
 
 /**
@@ -7,7 +8,7 @@ import dagger.Provides;
  * email:13767191284@163.com
  * description:
  */
-
+@Module
 public class DownloadModule {
 
     private final DownloadContract.View mView;

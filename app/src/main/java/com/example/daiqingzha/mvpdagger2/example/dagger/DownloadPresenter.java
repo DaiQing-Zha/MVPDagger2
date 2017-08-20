@@ -1,5 +1,7 @@
 package com.example.daiqingzha.mvpdagger2.example.dagger;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 /**
@@ -23,5 +25,6 @@ public class DownloadPresenter implements DownloadContract.Presenter {
 
     @Override
     public void download(String address) {
+        Log.e("downloadPresenter","start download file " + address);
     }
 }
